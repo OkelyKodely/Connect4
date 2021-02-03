@@ -6,11 +6,9 @@ import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.*;
-
 public class Connect4 {
 
     Graphics2D g;
-
     public void r6(){
         circle2 c1 = new circle2();
         c1.x = 10+140+6+140+6+140+6+140+140+140-28+15;
@@ -468,6 +466,31 @@ public class Connect4 {
         for(int gg=0; gg<7; gg++) {
             for(int hh=0; hh<6; hh++) {
                 try {
+                    int number0 = arr[gg+3][hh];
+                    int number1 = arr[gg+2][hh];
+                    int number2 = arr[gg+1][hh];
+                    int number3 = arr[gg][hh];
+                    if(number0 == 1 &&
+                            number1 == 1 &&
+                            number2 == 1 &&
+                            number3 == 1) {
+                        JOptionPane.showMessageDialog(this.p, "White wins.");
+                        found = true;
+                    } else if(number0 == 2 &&
+                            number1 == 2 &&
+                            number2 == 2 &&
+                            number3 == 2) {
+                        JOptionPane.showMessageDialog(this.p, "Green wins.");
+                        found = true;
+                    }
+                } catch(Exception e) {
+                    
+                }
+            }
+        }
+        for(int gg=0; gg<7; gg++) {
+            for(int hh=0; hh<6; hh++) {
+                try {
                     int number0 = arr[gg-3][hh];
                     int number1 = arr[gg-2][hh];
                     int number2 = arr[gg-1][hh];
@@ -486,7 +509,7 @@ public class Connect4 {
                         found = true;
                     }
                 } catch(Exception e) {
-                    e.printStackTrace();
+                    
                 }
                 try {
                     int number0 = arr[gg-3][hh-3];
@@ -507,7 +530,7 @@ public class Connect4 {
                         found = true;
                     }
                 } catch(Exception e) {
-                    e.printStackTrace();
+                    
                 }
                 try {
                     int number0 = arr[gg][hh-3];
@@ -528,7 +551,7 @@ public class Connect4 {
                         found = true;
                     }
                 } catch(Exception e) {
-                    e.printStackTrace();
+                    
                 }
                 try {
                     int number0 = arr[gg+3][hh-3];
@@ -549,7 +572,7 @@ public class Connect4 {
                         found = true;
                     }
                 } catch(Exception e) {
-                    e.printStackTrace();
+                    
                 }
                 try {
                     int number0 = arr[gg+3][hh+3];
@@ -570,7 +593,7 @@ public class Connect4 {
                         found = true;
                     }
                 } catch(Exception e) {
-                    e.printStackTrace();
+                    
                 }
             }
         }
@@ -744,117 +767,117 @@ public class Connect4 {
                                 arr[0][4] == 1 &&
                                 arr[0][3] == 1) {
                             r0();
-                            System.out.println(0);
+                            ///System.out.println(0);
                         } else if(arr[0][4] == 0 &&
                                 arr[0][3] == 1 &&
                                 arr[0][2] == 1) {
                             r0();
-                            System.out.println(0);
+                            ///System.out.println(0);
                         } else if(arr[0][3] == 0 &&
                                 arr[0][2] == 1 &&
                                 arr[0][1] == 1) {
                             r0();
-                            System.out.println(0);
+                            ///System.out.println(0);
                         } else if(arr[0][2] == 0 &&
                                 arr[0][1] == 1 &&
                                 arr[0][0] == 1) {
                             r0();
-                            System.out.println(0);
+                            ///System.out.println(0);
                         } else if(arr[1][5] == 0 &&
                                 arr[1][4] == 1 &&
                                 arr[1][3] == 1) {
                             r1();
-                            System.out.println(1);
+                            ///System.out.println(1);
                         } else if(arr[1][4] == 0 &&
                                 arr[1][3] == 1 &&
                                 arr[1][2] == 1) {
                             r1();
-                            System.out.println(1);
+                            ///System.out.println(1);
                         } else if(arr[1][3] == 0 &&
                                 arr[1][2] == 1 &&
                                 arr[1][1] == 1) {
                             r1();
-                            System.out.println(1);
+                            ///System.out.println(1);
                         } else if(arr[1][2] == 0 &&
                                 arr[1][1] == 1 &&
                                 arr[1][0] == 1) {
                             r1();
-                            System.out.println(1);
+                            ///System.out.println(1);
                         } else if(arr[2][5] == 0 &&
                                 arr[2][4] == 1 &&
                                 arr[2][3] == 1) {
                             r2();
-                            System.out.println(2);
+                            ///System.out.println(2);
                         } else if(arr[2][4] == 0 &&
                                 arr[2][3] == 1 &&
                                 arr[2][2] == 1) {
                             r2();
-                            System.out.println(2);
+                            ///System.out.println(2);
                         } else if(arr[2][3] == 0 &&
                                 arr[2][2] == 1 &&
                                 arr[2][1] == 1) {
                             r2();
-                            System.out.println(2);
+                            ///System.out.println(2);
                         } else if(arr[2][2] == 0 &&
                                 arr[2][1] == 1 &&
                                 arr[2][0] == 1) {
                             r2();
-                            System.out.println(2);
+                            ///System.out.println(2);
                         } else if(arr[3][5] == 0 &&
                                 arr[3][4] == 1 &&
                                 arr[3][3] == 1) {
                             r3();
-                            System.out.println(3);
+                            ///System.out.println(3);
                         } else if(arr[3][4] == 0 &&
                                 arr[3][3] == 1 &&
                                 arr[3][2] == 1) {
                             r3();
-                            System.out.println(3);
+                            ///System.out.println(3);
                         } else if(arr[3][3] == 0 &&
                                 arr[3][2] == 1 &&
                                 arr[3][1] == 1) {
                             r3();
-                            System.out.println(3);
+                            ///System.out.println(3);
                         } else if(arr[3][2] == 0 &&
                                 arr[3][1] == 1 &&
                                 arr[3][0] == 1) {
                             r3();
-                            System.out.println(3);
+                            ///System.out.println(3);
                         } else if(arr[4][5] == 0 &&
                                 arr[4][4] == 1 &&
                                 arr[4][3] == 1) {
                             r4();
-                            System.out.println(4);
+                            ///System.out.println(4);
                         } else if(arr[4][4] == 0 &&
                                 arr[4][3] == 1 &&
                                 arr[4][2] == 1) {
                             r4();
-                            System.out.println(4);
+                            ///System.out.println(4);
                         } else if(arr[4][3] == 0 &&
                                 arr[4][2] == 1 &&
                                 arr[4][1] == 1) {
                             r4();
-                            System.out.println(4);
+                            ///System.out.println(4);
                         } else if(arr[4][2] == 0 &&
                                 arr[4][1] == 1 &&
                                 arr[4][0] == 1) {
                             r4();
-                            System.out.println(4);
+                            ///System.out.println(4);
                         } else if(arr[5][5] == 0 &&
                                 arr[5][4] == 1 &&
                                 arr[5][3] == 1) {
                             r5();
-                            System.out.println(5);
+                            ///System.out.println(5);
                         } else if(arr[5][4] == 0 &&
                                 arr[5][3] == 1 &&
                                 arr[5][2] == 1) {
                             r5();
-                            System.out.println(5);
+                            ///System.out.println(5);
                         } else if(arr[5][3] == 0 &&
                                 arr[5][2] == 1 &&
                                 arr[5][1] == 1) {
                             r5();
-                            System.out.println(5);
+                            ///System.out.println(5);
                         } else if(arr[5][2] == 0 &&
                                 arr[5][1] == 1 &&
                                 arr[5][0] == 1) {
@@ -863,26 +886,26 @@ public class Connect4 {
                                 arr[6][4] == 1 &&
                                 arr[6][3] == 1) {
                             r6();
-                            System.out.println(6);
+                            ///System.out.println(6);
                         } else if(arr[6][4] == 0 &&
                                 arr[6][3] == 1 &&
                                 arr[6][2] == 1) {
                             r6();
-                            System.out.println(6);
+                            ///System.out.println(6);
                         } else if(arr[6][3] == 0 &&
                                 arr[6][2] == 1 &&
                                 arr[6][1] == 1) {
                             r6();
-                            System.out.println(6);
+                            ///System.out.println(6);
                         } else if(arr[6][2] == 0 &&
                                 arr[6][1] == 1 &&
                                 arr[6][0] == 1) {
                             r6();
-                            System.out.println(6);
+                            ///System.out.println(6);
                         } else {
                             Random r = new Random();
                             int v = r.nextInt(7);
-                            System.out.println(v);
+                            ///System.out.println(v);
                             if(turn == 1) {
                                 if(v == 0) {
                                     r0();
@@ -908,7 +931,7 @@ public class Connect4 {
                                 try {
                                     Thread.sleep(1000);
                                 } catch(Exception e) {
-                                    e.printStackTrace();
+                                    
                                 }
                             }
                         }
@@ -967,7 +990,7 @@ public class Connect4 {
                                 g.setColor(Color.WHITE);
                                 g.drawString("DROP HERE", 10+10, 70);
                             } catch(Exception e) {
-                                e.printStackTrace();
+                                
                             }
                         }
                     });
@@ -985,7 +1008,7 @@ public class Connect4 {
                                 g.setColor(Color.WHITE);
                                 g.drawString("DROP HERE", 10+10+10+140+6+10, 70);
                             } catch(Exception e) {
-                                e.printStackTrace();
+                                
                             }
                         }
                     });
@@ -1003,7 +1026,7 @@ public class Connect4 {
                                 g.setColor(Color.WHITE);
                                 g.drawString("DROP HERE", 10+10+140+6+140+6+10, 70);
                             } catch(Exception e) {
-                                e.printStackTrace();
+                                
                             }
                         }
                     });
@@ -1021,7 +1044,7 @@ public class Connect4 {
                                 g.setColor(Color.WHITE);
                                 g.drawString("DROP HERE", 10+140+6+140+6+140+6+10, 70);
                             } catch(Exception e) {
-                                e.printStackTrace();
+                                
                             }
                         }
                     });
@@ -1039,7 +1062,7 @@ public class Connect4 {
                                 g.setColor(Color.WHITE);
                                 g.drawString("DROP HERE", 10+140+6+140+6+140+6+140+6+10, 70);
                             } catch(Exception e) {
-                                e.printStackTrace();
+                                
                             }
                         }
                     });
@@ -1057,7 +1080,7 @@ public class Connect4 {
                                 g.setColor(Color.WHITE);
                                 g.drawString("DROP HERE", 10+140+6+140+6+140+6+140+6+140+6+10, 70);
                             } catch(Exception e) {
-                                e.printStackTrace();
+                                
                             }
                         }
                     });
@@ -1075,7 +1098,7 @@ public class Connect4 {
                                 g.setColor(Color.WHITE);
                                 g.drawString("DROP HERE", 10+140+6+140+6+140+6+140+6+140+6+140+6+10, 70);
                             } catch(Exception e) {
-                                e.printStackTrace();
+                                
                             }
                         }
                     });
@@ -1688,8 +1711,7 @@ public class Connect4 {
         int height = 120;
     }
 
-    public static void main(String args[]) {
-        try {
+    public  static  void main(String args[]) {try {
             SwingUtilities.invokeAndWait(new Runnable() {
                 @Override
                 public void run() {
