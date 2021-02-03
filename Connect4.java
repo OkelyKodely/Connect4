@@ -23,18 +23,21 @@ public class Connect4 {
                 c1.y = 100+10+6+i*140;
             }
         }
+        if(fass) {
+            return;
+        }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        for(int i=110; i<c1.y; i+=5) {
+        for(int i=110; i<c1.y; i+=8) {
             g.setColor(Color.YELLOW);
-            g.fillRect(10, 80, 990, 890);
+            g.fillRect(10, 80, 1100, 890);
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.GRAY);
@@ -56,7 +59,7 @@ public class Connect4 {
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.YELLOW);
-                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                 }
             }
             for(int gg=0; gg<7; gg++) {
@@ -66,11 +69,11 @@ public class Connect4 {
                 }
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(5);
             } catch(Exception e) {}
         }
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
@@ -101,18 +104,21 @@ public class Connect4 {
                 c1.y = 100+10+6+i*140;
             }
         }
+        if(fass) {
+            return;
+        }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        for(int i=110; i<c1.y; i+=5) {
+        for(int i=110; i<c1.y; i+=8) {
             g.setColor(Color.YELLOW);
-            g.fillRect(10, 80, 990, 890);
+            g.fillRect(10, 80, 1100, 890);
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.GRAY);
@@ -134,15 +140,15 @@ public class Connect4 {
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.YELLOW);
-                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                 }
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(5);
             } catch(Exception e) {}
         }
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
@@ -172,18 +178,21 @@ public class Connect4 {
                 c1.y = 100+10+6+i*140;
             }
         }
+        if(fass) {
+            return;
+        }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        for(int i=110; i<c1.y; i+=5) {
+        for(int i=110; i<c1.y; i+=8) {
             g.setColor(Color.YELLOW);
-            g.fillRect(10, 80, 990, 890);
+            g.fillRect(10, 80, 1100, 890);
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.GRAY);
@@ -205,15 +214,15 @@ public class Connect4 {
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.YELLOW);
-                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                 }
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(5);
             } catch(Exception e) {}
         }
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
@@ -243,18 +252,21 @@ public class Connect4 {
                 c1.y = 100+10+6+i*140;
             }
         }
+        if(fass) {
+            return;
+        }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        for(int i=110; i<c1.y; i+=5) {
+        for(int i=110; i<c1.y; i+=8) {
             g.setColor(Color.YELLOW);
-            g.fillRect(10, 80, 990, 890);
+            g.fillRect(10, 80, 1100, 890);
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.GRAY);
@@ -276,15 +288,15 @@ public class Connect4 {
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.YELLOW);
-                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                 }
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(5);
             } catch(Exception e) {}
         }
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
@@ -315,18 +327,21 @@ public class Connect4 {
                 c1.y = 100+10+6+i*140;
             }
         }
+        if(fass) {
+            return;
+        }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        for(int i=110; i<c1.y; i+=5) {
+        for(int i=110; i<c1.y; i+=8) {
             g.setColor(Color.YELLOW);
-            g.fillRect(10, 80, 990, 890);
+            g.fillRect(10, 80, 1100, 890);
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.GRAY);
@@ -348,15 +363,15 @@ public class Connect4 {
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.YELLOW);
-                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                 }
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(5);
             } catch(Exception e) {}
         }
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
@@ -386,18 +401,21 @@ public class Connect4 {
                 c1.y = 100+10+6+i*140;
             }
         }
+        if(fass) {
+            return;
+        }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        for(int i=110; i<c1.y; i+=5) {
+        for(int i=110; i<c1.y; i+=8) {
             g.setColor(Color.YELLOW);
-            g.fillRect(10, 80, 990, 890);
+            g.fillRect(10, 80, 1100, 890);
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.GRAY);
@@ -419,15 +437,15 @@ public class Connect4 {
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.YELLOW);
-                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                 }
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(5);
             } catch(Exception e) {}
         }
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
@@ -458,13 +476,13 @@ public class Connect4 {
                             number1 == 1 &&
                             number2 == 1 &&
                             number3 == 1) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "Green wins.");
+                        JOptionPane.showMessageDialog(this.p, "White wins.");
                         found = true;
                     } else if(number0 == 2 &&
                             number1 == 2 &&
                             number2 == 2 &&
                             number3 == 2) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "White wins.");
+                        JOptionPane.showMessageDialog(this.p, "Green wins.");
                         found = true;
                     }
                 } catch(Exception e) {
@@ -479,13 +497,13 @@ public class Connect4 {
                             number1 == 1 &&
                             number2 == 1 &&
                             number3 == 1) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "Green wins.");
+                        JOptionPane.showMessageDialog(this.p, "White wins.");
                         found = true;
                     } else if(number0 == 2 &&
                             number1 == 2 &&
                             number2 == 2 &&
                             number3 == 2) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "White wins.");
+                        JOptionPane.showMessageDialog(this.p, "Green wins.");
                         found = true;
                     }
                 } catch(Exception e) {
@@ -500,13 +518,13 @@ public class Connect4 {
                             number1 == 1 &&
                             number2 == 1 &&
                             number3 == 1) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "Green wins.");
+                        JOptionPane.showMessageDialog(this.p, "White wins.");
                         found = true;
                     } else if(number0 == 2 &&
                             number1 == 2 &&
                             number2 == 2 &&
                             number3 == 2) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "White wins.");
+                        JOptionPane.showMessageDialog(this.p, "Green wins.");
                         found = true;
                     }
                 } catch(Exception e) {
@@ -521,13 +539,13 @@ public class Connect4 {
                             number1 == 1 &&
                             number2 == 1 &&
                             number3 == 1) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "Green wins.");
+                        JOptionPane.showMessageDialog(this.p, "White wins.");
                         found = true;
                     } else if(number0 == 2 &&
                             number1 == 2 &&
                             number2 == 2 &&
                             number3 == 2) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "White wins.");
+                        JOptionPane.showMessageDialog(this.p, "Green wins.");
                         found = true;
                     }
                 } catch(Exception e) {
@@ -542,13 +560,13 @@ public class Connect4 {
                             number1 == 1 &&
                             number2 == 1 &&
                             number3 == 1) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "Green wins.");
+                        JOptionPane.showMessageDialog(this.p, "White wins.");
                         found = true;
                     } else if(number0 == 2 &&
                             number1 == 2 &&
                             number2 == 2 &&
                             number3 == 2) {
-                        System.out.print("Green wins.");JOptionPane.showMessageDialog(this.p, "White wins.");
+                        JOptionPane.showMessageDialog(this.p, "Green wins.");
                         found = true;
                     }
                 } catch(Exception e) {
@@ -573,18 +591,21 @@ public class Connect4 {
                 c1.y = 100+10+6+i*140;
             }
         }
+        if(fass) {
+            return;
+        }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        for(int i=110; i<c1.y; i+=5) {
+        for(int i=110; i<c1.y; i+=8) {
             g.setColor(Color.YELLOW);
-            g.fillRect(10, 80, 990, 890);
+            g.fillRect(10, 80, 1100, 890);
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.GRAY);
@@ -606,15 +627,15 @@ public class Connect4 {
             for(int gg=0; gg<7; gg++) {
                 for(int j=0; j<6; j++) {
                     g.setColor(Color.YELLOW);
-                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                 }
             }
             try {
-                Thread.sleep(100);
+                Thread.sleep(5);
             } catch(Exception e) {}
         }
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 80, 990, 890);
+        g.fillRect(10, 80, 1100, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
                 g.setColor(Color.GRAY);
@@ -917,7 +938,7 @@ public class Connect4 {
                 g.setColor(Color.WHITE);
                 g.drawString("DROP HERE", 10+140+6+140+6+140+6+140+6+140+6+140+6+10, 70);
                 g.setColor(Color.YELLOW);
-                g.fillRect(10, 80, 990, 890);
+                g.fillRect(10, 80, 1100, 890);
                 for(int i=0; i<7; i++) {
                     for(int j=0; j<6; j++) {
                         g.setColor(Color.GRAY);
@@ -1087,16 +1108,16 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                for(int i=110; i<c1.y; i+=5) {
+                                for(int i=110; i<c1.y; i+=8) {
                                     g.setColor(Color.YELLOW);
-                                    g.fillRect(10, 80, 990, 890);
+                                    g.fillRect(10, 80, 1100, 890);
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.GRAY);
@@ -1118,15 +1139,15 @@ public class Connect4 {
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.YELLOW);
-                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                                         }
                                     }
                                     try {
-                                        Thread.sleep(100);
+                                        Thread.sleep(3);
                                     } catch(Exception e) {}
                                 }
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
@@ -1168,16 +1189,16 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                for(int i=110; i<c1.y; i+=5) {
+                                for(int i=110; i<c1.y; i+=8) {
                                     g.setColor(Color.YELLOW);
-                                    g.fillRect(10, 80, 990, 890);
+                                    g.fillRect(10, 80, 1100, 890);
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.GRAY);
@@ -1199,15 +1220,15 @@ public class Connect4 {
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.YELLOW);
-                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                                         }
                                     }
                                     try {
-                                        Thread.sleep(100);
+                                        Thread.sleep(5);
                                     } catch(Exception e) {}
                                 }
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
@@ -1249,16 +1270,16 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                for(int i=110; i<c1.y; i+=5) {
+                                for(int i=110; i<c1.y; i+=8) {
                                     g.setColor(Color.YELLOW);
-                                    g.fillRect(10, 80, 990, 890);
+                                    g.fillRect(10, 80, 1100, 890);
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.GRAY);
@@ -1280,15 +1301,15 @@ public class Connect4 {
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.YELLOW);
-                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                                         }
                                     }
                                     try {
-                                        Thread.sleep(100);
+                                        Thread.sleep(5);
                                     } catch(Exception e) {}
                                 }
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
@@ -1330,16 +1351,16 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                for(int i=110; i<c1.y; i+=5) {
+                                for(int i=110; i<c1.y; i+=8) {
                                     g.setColor(Color.YELLOW);
-                                    g.fillRect(10, 80, 990, 890);
+                                    g.fillRect(10, 80, 1100, 890);
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.GRAY);
@@ -1361,15 +1382,15 @@ public class Connect4 {
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.YELLOW);
-                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                                         }
                                     }
                                     try {
-                                        Thread.sleep(100);
+                                        Thread.sleep(5);
                                     } catch(Exception e) {}
                                 }
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
@@ -1411,16 +1432,16 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                for(int i=110; i<c1.y; i+=5) {
+                                for(int i=110; i<c1.y; i+=8) {
                                     g.setColor(Color.YELLOW);
-                                    g.fillRect(10, 80, 990, 890);
+                                    g.fillRect(10, 80, 1100, 890);
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.GRAY);
@@ -1442,15 +1463,15 @@ public class Connect4 {
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.YELLOW);
-                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                                         }
                                     }
                                     try {
-                                        Thread.sleep(100);
+                                        Thread.sleep(5);
                                     } catch(Exception e) {}
                                 }
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
@@ -1492,16 +1513,16 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                for(int i=110; i<c1.y; i+=5) {
+                                for(int i=110; i<c1.y; i+=8) {
                                     g.setColor(Color.YELLOW);
-                                    g.fillRect(10, 80, 990, 890);
+                                    g.fillRect(10, 80, 1100, 890);
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.GRAY);
@@ -1523,15 +1544,15 @@ public class Connect4 {
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.YELLOW);
-                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                                         }
                                     }
                                     try {
-                                        Thread.sleep(100);
+                                        Thread.sleep(5);
                                     } catch(Exception e) {}
                                 }
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
@@ -1574,16 +1595,16 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                for(int i=110; i<c1.y; i+=5) {
+                                for(int i=110; i<c1.y; i+=8) {
                                     g.setColor(Color.YELLOW);
-                                    g.fillRect(10, 80, 990, 890);
+                                    g.fillRect(10, 80, 1100, 890);
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.GRAY);
@@ -1605,15 +1626,15 @@ public class Connect4 {
                                     for(int gg=0; gg<7; gg++) {
                                         for(int j=0; j<6; j++) {
                                             g.setColor(Color.YELLOW);
-                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 21);
                                         }
                                     }
                                     try {
-                                        Thread.sleep(100);
+                                        Thread.sleep(5);
                                     } catch(Exception e) {}
                                 }
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 80, 990, 890);
+                                g.fillRect(10, 80, 1100, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
                                         g.setColor(Color.GRAY);
