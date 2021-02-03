@@ -25,59 +25,66 @@ public class Connect4 {
         }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 90, 990, 890);
+        g.fillRect(10, 80, 990, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
-                g.setColor(Color.BLACK);
+                g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        Thread t = new Thread() {
-            public void run() {
-                for(int i=110; i<c1.y; i++) {
-                    g.setColor(Color.YELLOW);
-                    g.fillRect(10, 90, 990, 890);
-                    for(int gg=0; gg<7; gg++) {
-                        for(int j=0; j<6; j++) {
-                            g.setColor(Color.BLACK);
-                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                        }
-                    }
-                    for(int k=0; k<circle1s.size(); k++) {
-                        g.setColor(circle1s.get(k).color);
-                        g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                    }
-                    for(int k=0; k<circle2s.size(); k++) {
-                        if(circle2s.get(k) != c1) {
-                            g.setColor(circle2s.get(k).color);
-                            g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                        }
-                    }
-                    g.setColor(c1.color);
-                    g.fillOval(c1.x, i, 120, 120);
-                    try {
-                        Thread.sleep(4);
-                    } catch(Exception e) {}
-                }
-                g.setColor(Color.YELLOW);
-                g.fillRect(10, 90, 990, 890);
-                for(int i=0; i<7; i++) {
-                    for(int j=0; j<6; j++) {
-                        g.setColor(Color.BLACK);
-                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                    }
-                }
-                for(int i=0; i<circle2s.size(); i++) {
-                    g.setColor(circle2s.get(i).color);
-                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
-                }
-                for(int i=0; i<circle1s.size(); i++) {
-                    g.setColor(circle1s.get(i).color);
-                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        for(int i=110; i<c1.y; i+=5) {
+            g.setColor(Color.YELLOW);
+            g.fillRect(10, 80, 990, 890);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.GRAY);
+                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                 }
             }
-        };
-        t.start();
+            for(int k=0; k<circle1s.size(); k++) {
+                g.setColor(circle1s.get(k).color);
+                g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+            }
+            for(int k=0; k<circle2s.size(); k++) {
+                if(circle2s.get(k) != c1) {
+                    g.setColor(circle2s.get(k).color);
+                    g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                }
+            }
+            g.setColor(c1.color);
+            g.fillOval(c1.x, i, 120, 120);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.YELLOW);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                }
+            }
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.YELLOW);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 20, 20);
+                }
+            }
+            try {
+                Thread.sleep(100);
+            } catch(Exception e) {}
+        }
+        g.setColor(Color.YELLOW);
+        g.fillRect(10, 80, 990, 890);
+        for(int i=0; i<7; i++) {
+            for(int j=0; j<6; j++) {
+                g.setColor(Color.GRAY);
+                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+            }
+        }
+        for(int i=0; i<circle2s.size(); i++) {
+            g.setColor(circle2s.get(i).color);
+            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+        }
+        for(int i=0; i<circle1s.size(); i++) {
+            g.setColor(circle1s.get(i).color);
+            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        }
         turn = 0;
     }
     
@@ -96,59 +103,60 @@ public class Connect4 {
         }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 90, 990, 890);
+        g.fillRect(10, 80, 990, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
-                g.setColor(Color.BLACK);
+                g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        Thread t = new Thread() {
-            public void run() {
-                for(int i=110; i<c1.y; i++) {
-                    g.setColor(Color.YELLOW);
-                    g.fillRect(10, 90, 990, 890);
-                    for(int gg=0; gg<7; gg++) {
-                        for(int j=0; j<6; j++) {
-                            g.setColor(Color.BLACK);
-                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                        }
-                    }
-                    for(int k=0; k<circle1s.size(); k++) {
-                        g.setColor(circle1s.get(k).color);
-                        g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                    }
-                    for(int k=0; k<circle2s.size(); k++) {
-                        if(circle2s.get(k) != c1) {
-                            g.setColor(circle2s.get(k).color);
-                            g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                        }
-                    }
-                    g.setColor(c1.color);
-                    g.fillOval(c1.x, i, 120, 120);
-                    try {
-                        Thread.sleep(4);
-                    } catch(Exception e) {}
-                }
-                g.setColor(Color.YELLOW);
-                g.fillRect(10, 90, 990, 890);
-                for(int i=0; i<7; i++) {
-                    for(int j=0; j<6; j++) {
-                        g.setColor(Color.BLACK);
-                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                    }
-                }
-                for(int i=0; i<circle2s.size(); i++) {
-                    g.setColor(circle2s.get(i).color);
-                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
-                }
-                for(int i=0; i<circle1s.size(); i++) {
-                    g.setColor(circle1s.get(i).color);
-                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        for(int i=110; i<c1.y; i+=5) {
+            g.setColor(Color.YELLOW);
+            g.fillRect(10, 80, 990, 890);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.GRAY);
+                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                 }
             }
-        };
-        t.start();
+            for(int k=0; k<circle1s.size(); k++) {
+                g.setColor(circle1s.get(k).color);
+                g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+            }
+            for(int k=0; k<circle2s.size(); k++) {
+                if(circle2s.get(k) != c1) {
+                    g.setColor(circle2s.get(k).color);
+                    g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                }
+            }
+            g.setColor(c1.color);
+            g.fillOval(c1.x, i, 120, 120);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.YELLOW);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                }
+            }
+            try {
+                Thread.sleep(100);
+            } catch(Exception e) {}
+        }
+        g.setColor(Color.YELLOW);
+        g.fillRect(10, 80, 990, 890);
+        for(int i=0; i<7; i++) {
+            for(int j=0; j<6; j++) {
+                g.setColor(Color.GRAY);
+                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+            }
+        }
+        for(int i=0; i<circle2s.size(); i++) {
+            g.setColor(circle2s.get(i).color);
+            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+        }
+        for(int i=0; i<circle1s.size(); i++) {
+            g.setColor(circle1s.get(i).color);
+            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        }
         turn = 0;
     }
     
@@ -166,59 +174,60 @@ public class Connect4 {
         }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 90, 990, 890);
+        g.fillRect(10, 80, 990, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
-                g.setColor(Color.BLACK);
+                g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        Thread t = new Thread() {
-            public void run() {
-                for(int i=110; i<c1.y; i++) {
-                    g.setColor(Color.YELLOW);
-                    g.fillRect(10, 90, 990, 890);
-                    for(int gg=0; gg<7; gg++) {
-                        for(int j=0; j<6; j++) {
-                            g.setColor(Color.BLACK);
-                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                        }
-                    }
-                    for(int k=0; k<circle1s.size(); k++) {
-                        g.setColor(circle1s.get(k).color);
-                        g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                    }
-                    for(int k=0; k<circle2s.size(); k++) {
-                        if(circle2s.get(k) != c1) {
-                            g.setColor(circle2s.get(k).color);
-                            g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                        }
-                    }
-                    g.setColor(c1.color);
-                    g.fillOval(c1.x, i, 120, 120);
-                    try {
-                        Thread.sleep(4);
-                    } catch(Exception e) {}
-                }
-                g.setColor(Color.YELLOW);
-                g.fillRect(10, 90, 990, 890);
-                for(int i=0; i<7; i++) {
-                    for(int j=0; j<6; j++) {
-                        g.setColor(Color.BLACK);
-                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                    }
-                }
-                for(int i=0; i<circle2s.size(); i++) {
-                    g.setColor(circle2s.get(i).color);
-                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
-                }
-                for(int i=0; i<circle1s.size(); i++) {
-                    g.setColor(circle1s.get(i).color);
-                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        for(int i=110; i<c1.y; i+=5) {
+            g.setColor(Color.YELLOW);
+            g.fillRect(10, 80, 990, 890);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.GRAY);
+                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                 }
             }
-        };
-        t.start();
+            for(int k=0; k<circle1s.size(); k++) {
+                g.setColor(circle1s.get(k).color);
+                g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+            }
+            for(int k=0; k<circle2s.size(); k++) {
+                if(circle2s.get(k) != c1) {
+                    g.setColor(circle2s.get(k).color);
+                    g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                }
+            }
+            g.setColor(c1.color);
+            g.fillOval(c1.x, i, 120, 120);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.YELLOW);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                }
+            }
+            try {
+                Thread.sleep(100);
+            } catch(Exception e) {}
+        }
+        g.setColor(Color.YELLOW);
+        g.fillRect(10, 80, 990, 890);
+        for(int i=0; i<7; i++) {
+            for(int j=0; j<6; j++) {
+                g.setColor(Color.GRAY);
+                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+            }
+        }
+        for(int i=0; i<circle2s.size(); i++) {
+            g.setColor(circle2s.get(i).color);
+            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+        }
+        for(int i=0; i<circle1s.size(); i++) {
+            g.setColor(circle1s.get(i).color);
+            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        }
         turn = 0;
     }
     
@@ -236,59 +245,60 @@ public class Connect4 {
         }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 90, 990, 890);
+        g.fillRect(10, 80, 990, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
-                g.setColor(Color.BLACK);
+                g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        Thread t = new Thread() {
-            public void run() {
-                for(int i=110; i<c1.y; i++) {
-                    g.setColor(Color.YELLOW);
-                    g.fillRect(10, 90, 990, 890);
-                    for(int gg=0; gg<7; gg++) {
-                        for(int j=0; j<6; j++) {
-                            g.setColor(Color.BLACK);
-                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                        }
-                    }
-                    for(int k=0; k<circle1s.size(); k++) {
-                        g.setColor(circle1s.get(k).color);
-                        g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                    }
-                    for(int k=0; k<circle2s.size(); k++) {
-                        if(circle2s.get(k) != c1) {
-                            g.setColor(circle2s.get(k).color);
-                            g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                        }
-                    }
-                    g.setColor(c1.color);
-                    g.fillOval(c1.x, i, 120, 120);
-                    try {
-                        Thread.sleep(4);
-                    } catch(Exception e) {}
-                }
-                g.setColor(Color.YELLOW);
-                g.fillRect(10, 90, 990, 890);
-                for(int i=0; i<7; i++) {
-                    for(int j=0; j<6; j++) {
-                        g.setColor(Color.BLACK);
-                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                    }
-                }
-                for(int i=0; i<circle2s.size(); i++) {
-                    g.setColor(circle2s.get(i).color);
-                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
-                }
-                for(int i=0; i<circle1s.size(); i++) {
-                    g.setColor(circle1s.get(i).color);
-                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        for(int i=110; i<c1.y; i+=5) {
+            g.setColor(Color.YELLOW);
+            g.fillRect(10, 80, 990, 890);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.GRAY);
+                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                 }
             }
-        };
-        t.start();
+            for(int k=0; k<circle1s.size(); k++) {
+                g.setColor(circle1s.get(k).color);
+                g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+            }
+            for(int k=0; k<circle2s.size(); k++) {
+                if(circle2s.get(k) != c1) {
+                    g.setColor(circle2s.get(k).color);
+                    g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                }
+            }
+            g.setColor(c1.color);
+            g.fillOval(c1.x, i, 120, 120);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.YELLOW);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                }
+            }
+            try {
+                Thread.sleep(100);
+            } catch(Exception e) {}
+        }
+        g.setColor(Color.YELLOW);
+        g.fillRect(10, 80, 990, 890);
+        for(int i=0; i<7; i++) {
+            for(int j=0; j<6; j++) {
+                g.setColor(Color.GRAY);
+                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+            }
+        }
+        for(int i=0; i<circle2s.size(); i++) {
+            g.setColor(circle2s.get(i).color);
+            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+        }
+        for(int i=0; i<circle1s.size(); i++) {
+            g.setColor(circle1s.get(i).color);
+            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        }
         turn = 0;
         
     }
@@ -307,59 +317,60 @@ public class Connect4 {
         }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 90, 990, 890);
+        g.fillRect(10, 80, 990, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
-                g.setColor(Color.BLACK);
+                g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        Thread t = new Thread() {
-            public void run() {
-                for(int i=110; i<c1.y; i++) {
-                    g.setColor(Color.YELLOW);
-                    g.fillRect(10, 90, 990, 890);
-                    for(int gg=0; gg<7; gg++) {
-                        for(int j=0; j<6; j++) {
-                            g.setColor(Color.BLACK);
-                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                        }
-                    }
-                    for(int k=0; k<circle1s.size(); k++) {
-                        g.setColor(circle1s.get(k).color);
-                        g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                    }
-                    for(int k=0; k<circle2s.size(); k++) {
-                        if(circle2s.get(k) != c1) {
-                            g.setColor(circle2s.get(k).color);
-                            g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                        }
-                    }
-                    g.setColor(c1.color);
-                    g.fillOval(c1.x, i, 120, 120);
-                    try {
-                        Thread.sleep(4);
-                    } catch(Exception e) {}
-                }
-                g.setColor(Color.YELLOW);
-                g.fillRect(10, 90, 990, 890);
-                for(int i=0; i<7; i++) {
-                    for(int j=0; j<6; j++) {
-                        g.setColor(Color.BLACK);
-                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                    }
-                }
-                for(int i=0; i<circle2s.size(); i++) {
-                    g.setColor(circle2s.get(i).color);
-                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
-                }
-                for(int i=0; i<circle1s.size(); i++) {
-                    g.setColor(circle1s.get(i).color);
-                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        for(int i=110; i<c1.y; i+=5) {
+            g.setColor(Color.YELLOW);
+            g.fillRect(10, 80, 990, 890);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.GRAY);
+                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                 }
             }
-        };
-        t.start();
+            for(int k=0; k<circle1s.size(); k++) {
+                g.setColor(circle1s.get(k).color);
+                g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+            }
+            for(int k=0; k<circle2s.size(); k++) {
+                if(circle2s.get(k) != c1) {
+                    g.setColor(circle2s.get(k).color);
+                    g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                }
+            }
+            g.setColor(c1.color);
+            g.fillOval(c1.x, i, 120, 120);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.YELLOW);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                }
+            }
+            try {
+                Thread.sleep(100);
+            } catch(Exception e) {}
+        }
+        g.setColor(Color.YELLOW);
+        g.fillRect(10, 80, 990, 890);
+        for(int i=0; i<7; i++) {
+            for(int j=0; j<6; j++) {
+                g.setColor(Color.GRAY);
+                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+            }
+        }
+        for(int i=0; i<circle2s.size(); i++) {
+            g.setColor(circle2s.get(i).color);
+            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+        }
+        for(int i=0; i<circle1s.size(); i++) {
+            g.setColor(circle1s.get(i).color);
+            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        }
         turn = 0;
         
     }
@@ -377,59 +388,60 @@ public class Connect4 {
         }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 90, 990, 890);
+        g.fillRect(10, 80, 990, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
-                g.setColor(Color.BLACK);
+                g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        Thread t = new Thread() {
-            public void run() {
-                for(int i=110; i<c1.y; i++) {
-                    g.setColor(Color.YELLOW);
-                    g.fillRect(10, 90, 990, 890);
-                    for(int gg=0; gg<7; gg++) {
-                        for(int j=0; j<6; j++) {
-                            g.setColor(Color.BLACK);
-                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                        }
-                    }
-                    for(int k=0; k<circle1s.size(); k++) {
-                        g.setColor(circle1s.get(k).color);
-                        g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                    }
-                    for(int k=0; k<circle2s.size(); k++) {
-                        if(circle2s.get(k) != c1) {
-                            g.setColor(circle2s.get(k).color);
-                            g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                        }
-                    }
-                    g.setColor(c1.color);
-                    g.fillOval(c1.x, i, 120, 120);
-                    try {
-                        Thread.sleep(4);
-                    } catch(Exception e) {}
-                }
-                g.setColor(Color.YELLOW);
-                g.fillRect(10, 90, 990, 890);
-                for(int i=0; i<7; i++) {
-                    for(int j=0; j<6; j++) {
-                        g.setColor(Color.BLACK);
-                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                    }
-                }
-                for(int i=0; i<circle2s.size(); i++) {
-                    g.setColor(circle2s.get(i).color);
-                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
-                }
-                for(int i=0; i<circle1s.size(); i++) {
-                    g.setColor(circle1s.get(i).color);
-                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        for(int i=110; i<c1.y; i+=5) {
+            g.setColor(Color.YELLOW);
+            g.fillRect(10, 80, 990, 890);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.GRAY);
+                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                 }
             }
-        };
-        t.start();
+            for(int k=0; k<circle1s.size(); k++) {
+                g.setColor(circle1s.get(k).color);
+                g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+            }
+            for(int k=0; k<circle2s.size(); k++) {
+                if(circle2s.get(k) != c1) {
+                    g.setColor(circle2s.get(k).color);
+                    g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                }
+            }
+            g.setColor(c1.color);
+            g.fillOval(c1.x, i, 120, 120);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.YELLOW);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                }
+            }
+            try {
+                Thread.sleep(100);
+            } catch(Exception e) {}
+        }
+        g.setColor(Color.YELLOW);
+        g.fillRect(10, 80, 990, 890);
+        for(int i=0; i<7; i++) {
+            for(int j=0; j<6; j++) {
+                g.setColor(Color.GRAY);
+                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+            }
+        }
+        for(int i=0; i<circle2s.size(); i++) {
+            g.setColor(circle2s.get(i).color);
+            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+        }
+        for(int i=0; i<circle1s.size(); i++) {
+            g.setColor(circle1s.get(i).color);
+            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        }
         turn = 0;
     }
     
@@ -563,59 +575,60 @@ public class Connect4 {
         }
         circle2s.add(c1);
         g.setColor(Color.YELLOW);
-        g.fillRect(10, 90, 990, 890);
+        g.fillRect(10, 80, 990, 890);
         for(int i=0; i<7; i++) {
             for(int j=0; j<6; j++) {
-                g.setColor(Color.BLACK);
+                g.setColor(Color.GRAY);
                 g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
             }
         }
-        Thread t = new Thread() {
-            public void run() {
-                for(int i=110; i<c1.y; i++) {
-                    g.setColor(Color.YELLOW);
-                    g.fillRect(10, 90, 990, 890);
-                    for(int gg=0; gg<7; gg++) {
-                        for(int j=0; j<6; j++) {
-                            g.setColor(Color.BLACK);
-                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                        }
-                    }
-                    for(int k=0; k<circle1s.size(); k++) {
-                        g.setColor(circle1s.get(k).color);
-                        g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                    }
-                    for(int k=0; k<circle2s.size(); k++) {
-                        if(circle2s.get(k) != c1) {
-                            g.setColor(circle2s.get(k).color);
-                            g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                        }
-                    }
-                    g.setColor(c1.color);
-                    g.fillOval(c1.x, i, 120, 120);
-                    try {
-                        Thread.sleep(4);
-                    } catch(Exception e) {}
-                }
-                g.setColor(Color.YELLOW);
-                g.fillRect(10, 90, 990, 890);
-                for(int i=0; i<7; i++) {
-                    for(int j=0; j<6; j++) {
-                        g.setColor(Color.BLACK);
-                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                    }
-                }
-                for(int i=0; i<circle2s.size(); i++) {
-                    g.setColor(circle2s.get(i).color);
-                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
-                }
-                for(int i=0; i<circle1s.size(); i++) {
-                    g.setColor(circle1s.get(i).color);
-                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        for(int i=110; i<c1.y; i+=5) {
+            g.setColor(Color.YELLOW);
+            g.fillRect(10, 80, 990, 890);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.GRAY);
+                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                 }
             }
-        };
-        t.start();
+            for(int k=0; k<circle1s.size(); k++) {
+                g.setColor(circle1s.get(k).color);
+                g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+            }
+            for(int k=0; k<circle2s.size(); k++) {
+                if(circle2s.get(k) != c1) {
+                    g.setColor(circle2s.get(k).color);
+                    g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                }
+            }
+            g.setColor(c1.color);
+            g.fillOval(c1.x, i, 120, 120);
+            for(int gg=0; gg<7; gg++) {
+                for(int j=0; j<6; j++) {
+                    g.setColor(Color.YELLOW);
+                    g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                }
+            }
+            try {
+                Thread.sleep(100);
+            } catch(Exception e) {}
+        }
+        g.setColor(Color.YELLOW);
+        g.fillRect(10, 80, 990, 890);
+        for(int i=0; i<7; i++) {
+            for(int j=0; j<6; j++) {
+                g.setColor(Color.GRAY);
+                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+            }
+        }
+        for(int i=0; i<circle2s.size(); i++) {
+            g.setColor(circle2s.get(i).color);
+            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+        }
+        for(int i=0; i<circle1s.size(); i++) {
+            g.setColor(circle1s.get(i).color);
+            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+        }
         turn = 0;
     }
     
@@ -652,6 +665,60 @@ public class Connect4 {
                         try {
                             Thread.sleep(2000);
                         } catch(Exception e) {}
+                        for(int gg=0; gg<7; gg++) {
+                            for(int hh=0; hh<6; hh++) {
+                                try {
+                                    int number0 = arr[gg][hh-1];
+                                    int number1 = arr[gg-1][hh-1];
+                                    int number2 = arr[gg-2][hh-2];
+                                    int number3 = arr[gg-3][hh-3];
+                                    if(number0 != 0 &&
+                                            number1 == 1 &&
+                                            number2 == 1 &&
+                                            number3 == 1) {
+                                        if(gg == 0)
+                                            r0();
+                                        if(gg == 1)
+                                            r1();
+                                        if(gg == 2)
+                                            r2();
+                                        if(gg == 3)
+                                            r3();
+                                        if(gg == 4)
+                                            r4();
+                                        if(gg == 5)
+                                            r5();
+                                        if(gg == 6)
+                                            r6();
+                                    }
+                                } catch(Exception e) {}
+                                try {
+                                    int number0 = arr[gg][hh-1];
+                                    int number1 = arr[gg+1][hh-1];
+                                    int number2 = arr[gg+2][hh-2];
+                                    int number3 = arr[gg+3][hh-3];
+                                    if(number0 != 0 &&
+                                            number1 == 1 &&
+                                            number2 == 1 &&
+                                            number3 == 1) {
+                                        if(gg == 0)
+                                            r0();
+                                        if(gg == 1)
+                                            r1();
+                                        if(gg == 2)
+                                            r2();
+                                        if(gg == 3)
+                                            r3();
+                                        if(gg == 4)
+                                            r4();
+                                        if(gg == 5)
+                                            r5();
+                                        if(gg == 6)
+                                            r6();
+                                    }
+                                } catch(Exception e) {}
+                            }
+                        }
                         if(arr[0][5] == 0 &&
                                 arr[0][4] == 1 &&
                                 arr[0][3] == 1) {
@@ -770,7 +837,6 @@ public class Connect4 {
                         } else if(arr[5][2] == 0 &&
                                 arr[5][1] == 1 &&
                                 arr[5][0] == 1) {
-                            System.out.println("t"+5);
                             r5();
                         } else if(arr[6][5] == 0 &&
                                 arr[6][4] == 1 &&
@@ -834,8 +900,8 @@ public class Connect4 {
         Thread t2 = new Thread(new Thread(new Runnable() {
             @Override
             public void run() {
-                g.setColor(Color.BLACK);
-                g.fillRect(0, 0, 1000, 1000);
+                g.setColor(Color.GRAY);
+                g.fillRect(0, 0, 1100, 1000);
                 g.setColor(Color.WHITE);
                 g.drawString("DROP HERE", 10+10, 70);
                 g.setColor(Color.WHITE);
@@ -851,10 +917,10 @@ public class Connect4 {
                 g.setColor(Color.WHITE);
                 g.drawString("DROP HERE", 10+140+6+140+6+140+6+140+6+140+6+140+6+10, 70);
                 g.setColor(Color.YELLOW);
-                g.fillRect(10, 90, 990, 890);
+                g.fillRect(10, 80, 990, 890);
                 for(int i=0; i<7; i++) {
                     for(int j=0; j<6; j++) {
-                        g.setColor(Color.BLACK);
+                        g.setColor(Color.GRAY);
                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                     }
                 }
@@ -873,7 +939,7 @@ public class Connect4 {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            g.setColor(Color.BLACK);
+                            g.setColor(Color.GRAY);
                             g.fillRect(10+10, 40, 140, 33);
                             try {
                                 Thread.sleep(1000);
@@ -891,7 +957,7 @@ public class Connect4 {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            g.setColor(Color.BLACK);
+                            g.setColor(Color.GRAY);
                             g.fillRect(10+10+10+140+6+10, 40, 140, 33);
                             try {
                                 Thread.sleep(1000);
@@ -909,7 +975,7 @@ public class Connect4 {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            g.setColor(Color.BLACK);
+                            g.setColor(Color.GRAY);
                             g.fillRect(10+10+140+6+140+6+10, 40, 140, 33);
                             try {
                                 Thread.sleep(1000);
@@ -927,7 +993,7 @@ public class Connect4 {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            g.setColor(Color.BLACK);
+                            g.setColor(Color.GRAY);
                             g.fillRect(10+140+6+140+6+140+6+10, 40, 140, 33);
                             try {
                                 Thread.sleep(1000);
@@ -945,7 +1011,7 @@ public class Connect4 {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            g.setColor(Color.BLACK);
+                            g.setColor(Color.GRAY);
                             g.fillRect(10+140+6+140+6+140+6+140+6+10, 40, 140, 33);
                             try {
                                 Thread.sleep(1000);
@@ -963,7 +1029,7 @@ public class Connect4 {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            g.setColor(Color.BLACK);
+                            g.setColor(Color.GRAY);
                             g.fillRect(10+140+6+140+6+140+6+140+6+140+6+10, 40, 140, 33);
                             try {
                                 Thread.sleep(1000);
@@ -981,7 +1047,7 @@ public class Connect4 {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            g.setColor(Color.BLACK);
+                            g.setColor(Color.GRAY);
                             g.fillRect(10+140+6+140+6+140+6+140+6+140+6+140+6+10, 40, 140, 33);
                             try {
                                 Thread.sleep(1000);
@@ -1021,59 +1087,60 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 90, 990, 890);
+                                g.fillRect(10, 80, 990, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
-                                        g.setColor(Color.BLACK);
+                                        g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                Thread t = new Thread() {
-                                    public void run() {
-                                        for(int i=110; i<c1.y; i++) {
-                                            g.setColor(Color.YELLOW);
-                                            g.fillRect(10, 90, 990, 890);
-                                            for(int gg=0; gg<7; gg++) {
-                                                for(int j=0; j<6; j++) {
-                                                    g.setColor(Color.BLACK);
-                                                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle1s.size(); k++) {
-                                                if(circle1s.get(k) != c1) {
-                                                    g.setColor(circle1s.get(k).color);
-                                                    g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle2s.size(); k++) {
-                                                g.setColor(circle2s.get(k).color);
-                                                g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                                            }
-                                            g.setColor(c1.color);
-                                            g.fillOval(c1.x, i, 120, 120);
-                                            try {
-                                                Thread.sleep(4);
-                                            } catch(Exception e) {}
-                                        }
-                                        g.setColor(Color.YELLOW);
-                                        g.fillRect(10, 90, 990, 890);
-                                        for(int i=0; i<7; i++) {
-                                            for(int j=0; j<6; j++) {
-                                                g.setColor(Color.BLACK);
-                                                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                                            }
-                                        }
-                                        for(int i=0; i<circle1s.size(); i++) {
-                                            g.setColor(circle1s.get(i).color);
-                                            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
-                                        }
-                                        for(int i=0; i<circle2s.size(); i++) {
-                                            g.setColor(circle2s.get(i).color);
-                                            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                for(int i=110; i<c1.y; i+=5) {
+                                    g.setColor(Color.YELLOW);
+                                    g.fillRect(10, 80, 990, 890);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.GRAY);
+                                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                                         }
                                     }
-                                };
-                                t.start();
+                                    for(int k=0; k<circle1s.size(); k++) {
+                                        if(circle1s.get(k) != c1) {
+                                            g.setColor(circle1s.get(k).color);
+                                            g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+                                        }
+                                    }
+                                    for(int k=0; k<circle2s.size(); k++) {
+                                        g.setColor(circle2s.get(k).color);
+                                        g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                                    }
+                                    g.setColor(c1.color);
+                                    g.fillOval(c1.x, i, 120, 120);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.YELLOW);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                        }
+                                    }
+                                    try {
+                                        Thread.sleep(100);
+                                    } catch(Exception e) {}
+                                }
+                                g.setColor(Color.YELLOW);
+                                g.fillRect(10, 80, 990, 890);
+                                for(int i=0; i<7; i++) {
+                                    for(int j=0; j<6; j++) {
+                                        g.setColor(Color.GRAY);
+                                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+                                    }
+                                }
+                                for(int i=0; i<circle1s.size(); i++) {
+                                    g.setColor(circle1s.get(i).color);
+                                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+                                }
+                                for(int i=0; i<circle2s.size(); i++) {
+                                    g.setColor(circle2s.get(i).color);
+                                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                }
                                 turn = 1;
                             }
                             else if(turn == 1) {
@@ -1101,59 +1168,60 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 90, 990, 890);
+                                g.fillRect(10, 80, 990, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
-                                        g.setColor(Color.BLACK);
+                                        g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                Thread t = new Thread() {
-                                    public void run() {
-                                        for(int i=110; i<c1.y; i++) {
-                                            g.setColor(Color.YELLOW);
-                                            g.fillRect(10, 90, 990, 890);
-                                            for(int gg=0; gg<7; gg++) {
-                                                for(int j=0; j<6; j++) {
-                                                    g.setColor(Color.BLACK);
-                                                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle1s.size(); k++) {
-                                                if(circle1s.get(k) != c1) {
-                                                    g.setColor(circle1s.get(k).color);
-                                                    g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle2s.size(); k++) {
-                                                g.setColor(circle2s.get(k).color);
-                                                g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                                            }
-                                            g.setColor(c1.color);
-                                            g.fillOval(c1.x, i, 120, 120);
-                                            try {
-                                                Thread.sleep(4);
-                                            } catch(Exception e) {}
-                                        }
-                                        g.setColor(Color.YELLOW);
-                                        g.fillRect(10, 90, 990, 890);
-                                        for(int i=0; i<7; i++) {
-                                            for(int j=0; j<6; j++) {
-                                                g.setColor(Color.BLACK);
-                                                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                                            }
-                                        }
-                                        for(int i=0; i<circle1s.size(); i++) {
-                                            g.setColor(circle1s.get(i).color);
-                                            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
-                                        }
-                                        for(int i=0; i<circle2s.size(); i++) {
-                                            g.setColor(circle2s.get(i).color);
-                                            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                for(int i=110; i<c1.y; i+=5) {
+                                    g.setColor(Color.YELLOW);
+                                    g.fillRect(10, 80, 990, 890);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.GRAY);
+                                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                                         }
                                     }
-                                };
-                                t.start();
+                                    for(int k=0; k<circle1s.size(); k++) {
+                                        if(circle1s.get(k) != c1) {
+                                            g.setColor(circle1s.get(k).color);
+                                            g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+                                        }
+                                    }
+                                    for(int k=0; k<circle2s.size(); k++) {
+                                        g.setColor(circle2s.get(k).color);
+                                        g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                                    }
+                                    g.setColor(c1.color);
+                                    g.fillOval(c1.x, i, 120, 120);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.YELLOW);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                        }
+                                    }
+                                    try {
+                                        Thread.sleep(100);
+                                    } catch(Exception e) {}
+                                }
+                                g.setColor(Color.YELLOW);
+                                g.fillRect(10, 80, 990, 890);
+                                for(int i=0; i<7; i++) {
+                                    for(int j=0; j<6; j++) {
+                                        g.setColor(Color.GRAY);
+                                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+                                    }
+                                }
+                                for(int i=0; i<circle1s.size(); i++) {
+                                    g.setColor(circle1s.get(i).color);
+                                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+                                }
+                                for(int i=0; i<circle2s.size(); i++) {
+                                    g.setColor(circle2s.get(i).color);
+                                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                }
                                 turn = 1;
                             }
                             else if(turn == 1) {
@@ -1181,59 +1249,60 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 90, 990, 890);
+                                g.fillRect(10, 80, 990, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
-                                        g.setColor(Color.BLACK);
+                                        g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                Thread t = new Thread() {
-                                    public void run() {
-                                        for(int i=110; i<c1.y; i++) {
-                                            g.setColor(Color.YELLOW);
-                                            g.fillRect(10, 90, 990, 890);
-                                            for(int gg=0; gg<7; gg++) {
-                                                for(int j=0; j<6; j++) {
-                                                    g.setColor(Color.BLACK);
-                                                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle1s.size(); k++) {
-                                                if(circle1s.get(k) != c1) {
-                                                    g.setColor(circle1s.get(k).color);
-                                                    g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle2s.size(); k++) {
-                                                g.setColor(circle2s.get(k).color);
-                                                g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                                            }
-                                            g.setColor(c1.color);
-                                            g.fillOval(c1.x, i, 120, 120);
-                                            try {
-                                                Thread.sleep(4);
-                                            } catch(Exception e) {}
-                                        }
-                                        g.setColor(Color.YELLOW);
-                                        g.fillRect(10, 90, 990, 890);
-                                        for(int i=0; i<7; i++) {
-                                            for(int j=0; j<6; j++) {
-                                                g.setColor(Color.BLACK);
-                                                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                                            }
-                                        }
-                                        for(int i=0; i<circle1s.size(); i++) {
-                                            g.setColor(circle1s.get(i).color);
-                                            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
-                                        }
-                                        for(int i=0; i<circle2s.size(); i++) {
-                                            g.setColor(circle2s.get(i).color);
-                                            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                for(int i=110; i<c1.y; i+=5) {
+                                    g.setColor(Color.YELLOW);
+                                    g.fillRect(10, 80, 990, 890);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.GRAY);
+                                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                                         }
                                     }
-                                };
-                                t.start();
+                                    for(int k=0; k<circle1s.size(); k++) {
+                                        if(circle1s.get(k) != c1) {
+                                            g.setColor(circle1s.get(k).color);
+                                            g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+                                        }
+                                    }
+                                    for(int k=0; k<circle2s.size(); k++) {
+                                        g.setColor(circle2s.get(k).color);
+                                        g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                                    }
+                                    g.setColor(c1.color);
+                                    g.fillOval(c1.x, i, 120, 120);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.YELLOW);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                        }
+                                    }
+                                    try {
+                                        Thread.sleep(100);
+                                    } catch(Exception e) {}
+                                }
+                                g.setColor(Color.YELLOW);
+                                g.fillRect(10, 80, 990, 890);
+                                for(int i=0; i<7; i++) {
+                                    for(int j=0; j<6; j++) {
+                                        g.setColor(Color.GRAY);
+                                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+                                    }
+                                }
+                                for(int i=0; i<circle1s.size(); i++) {
+                                    g.setColor(circle1s.get(i).color);
+                                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+                                }
+                                for(int i=0; i<circle2s.size(); i++) {
+                                    g.setColor(circle2s.get(i).color);
+                                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                }
                                 turn = 1;
                             }
                             else if(turn == 1) {
@@ -1261,59 +1330,60 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 90, 990, 890);
+                                g.fillRect(10, 80, 990, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
-                                        g.setColor(Color.BLACK);
+                                        g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                Thread t = new Thread() {
-                                    public void run() {
-                                        for(int i=110; i<c1.y; i++) {
-                                            g.setColor(Color.YELLOW);
-                                            g.fillRect(10, 90, 990, 890);
-                                            for(int gg=0; gg<7; gg++) {
-                                                for(int j=0; j<6; j++) {
-                                                    g.setColor(Color.BLACK);
-                                                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle1s.size(); k++) {
-                                                if(circle1s.get(k) != c1) {
-                                                    g.setColor(circle1s.get(k).color);
-                                                    g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle2s.size(); k++) {
-                                                g.setColor(circle2s.get(k).color);
-                                                g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                                            }
-                                            g.setColor(c1.color);
-                                            g.fillOval(c1.x, i, 120, 120);
-                                            try {
-                                                Thread.sleep(4);
-                                            } catch(Exception e) {}
-                                        }
-                                        g.setColor(Color.YELLOW);
-                                        g.fillRect(10, 90, 990, 890);
-                                        for(int i=0; i<7; i++) {
-                                            for(int j=0; j<6; j++) {
-                                                g.setColor(Color.BLACK);
-                                                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                                            }
-                                        }
-                                        for(int i=0; i<circle1s.size(); i++) {
-                                            g.setColor(circle1s.get(i).color);
-                                            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
-                                        }
-                                        for(int i=0; i<circle2s.size(); i++) {
-                                            g.setColor(circle2s.get(i).color);
-                                            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                for(int i=110; i<c1.y; i+=5) {
+                                    g.setColor(Color.YELLOW);
+                                    g.fillRect(10, 80, 990, 890);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.GRAY);
+                                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                                         }
                                     }
-                                };
-                                t.start();
+                                    for(int k=0; k<circle1s.size(); k++) {
+                                        if(circle1s.get(k) != c1) {
+                                            g.setColor(circle1s.get(k).color);
+                                            g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+                                        }
+                                    }
+                                    for(int k=0; k<circle2s.size(); k++) {
+                                        g.setColor(circle2s.get(k).color);
+                                        g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                                    }
+                                    g.setColor(c1.color);
+                                    g.fillOval(c1.x, i, 120, 120);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.YELLOW);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                        }
+                                    }
+                                    try {
+                                        Thread.sleep(100);
+                                    } catch(Exception e) {}
+                                }
+                                g.setColor(Color.YELLOW);
+                                g.fillRect(10, 80, 990, 890);
+                                for(int i=0; i<7; i++) {
+                                    for(int j=0; j<6; j++) {
+                                        g.setColor(Color.GRAY);
+                                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+                                    }
+                                }
+                                for(int i=0; i<circle1s.size(); i++) {
+                                    g.setColor(circle1s.get(i).color);
+                                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+                                }
+                                for(int i=0; i<circle2s.size(); i++) {
+                                    g.setColor(circle2s.get(i).color);
+                                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                }
                                 turn = 1;
                             }
                             else if(turn == 1) {
@@ -1341,59 +1411,60 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 90, 990, 890);
+                                g.fillRect(10, 80, 990, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
-                                        g.setColor(Color.BLACK);
+                                        g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                Thread t = new Thread() {
-                                    public void run() {
-                                        for(int i=110; i<c1.y; i++) {
-                                            g.setColor(Color.YELLOW);
-                                            g.fillRect(10, 90, 990, 890);
-                                            for(int gg=0; gg<7; gg++) {
-                                                for(int j=0; j<6; j++) {
-                                                    g.setColor(Color.BLACK);
-                                                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle1s.size(); k++) {
-                                                if(circle1s.get(k) != c1) {
-                                                    g.setColor(circle1s.get(k).color);
-                                                    g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle2s.size(); k++) {
-                                                g.setColor(circle2s.get(k).color);
-                                                g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                                            }
-                                            g.setColor(c1.color);
-                                            g.fillOval(c1.x, i, 120, 120);
-                                            try {
-                                                Thread.sleep(4);
-                                            } catch(Exception e) {}
-                                        }
-                                        g.setColor(Color.YELLOW);
-                                        g.fillRect(10, 90, 990, 890);
-                                        for(int i=0; i<7; i++) {
-                                            for(int j=0; j<6; j++) {
-                                                g.setColor(Color.BLACK);
-                                                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                                            }
-                                        }
-                                        for(int i=0; i<circle1s.size(); i++) {
-                                            g.setColor(circle1s.get(i).color);
-                                            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
-                                        }
-                                        for(int i=0; i<circle2s.size(); i++) {
-                                            g.setColor(circle2s.get(i).color);
-                                            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                for(int i=110; i<c1.y; i+=5) {
+                                    g.setColor(Color.YELLOW);
+                                    g.fillRect(10, 80, 990, 890);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.GRAY);
+                                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                                         }
                                     }
-                                };
-                                t.start();
+                                    for(int k=0; k<circle1s.size(); k++) {
+                                        if(circle1s.get(k) != c1) {
+                                            g.setColor(circle1s.get(k).color);
+                                            g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+                                        }
+                                    }
+                                    for(int k=0; k<circle2s.size(); k++) {
+                                        g.setColor(circle2s.get(k).color);
+                                        g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                                    }
+                                    g.setColor(c1.color);
+                                    g.fillOval(c1.x, i, 120, 120);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.YELLOW);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                        }
+                                    }
+                                    try {
+                                        Thread.sleep(100);
+                                    } catch(Exception e) {}
+                                }
+                                g.setColor(Color.YELLOW);
+                                g.fillRect(10, 80, 990, 890);
+                                for(int i=0; i<7; i++) {
+                                    for(int j=0; j<6; j++) {
+                                        g.setColor(Color.GRAY);
+                                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+                                    }
+                                }
+                                for(int i=0; i<circle1s.size(); i++) {
+                                    g.setColor(circle1s.get(i).color);
+                                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+                                }
+                                for(int i=0; i<circle2s.size(); i++) {
+                                    g.setColor(circle2s.get(i).color);
+                                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                }
                                 turn = 1;
                             }
                             else if(turn == 1) {
@@ -1421,59 +1492,60 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 90, 990, 890);
+                                g.fillRect(10, 80, 990, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
-                                        g.setColor(Color.BLACK);
+                                        g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                Thread t = new Thread() {
-                                    public void run() {
-                                        for(int i=110; i<c1.y; i++) {
-                                            g.setColor(Color.YELLOW);
-                                            g.fillRect(10, 90, 990, 890);
-                                            for(int gg=0; gg<7; gg++) {
-                                                for(int j=0; j<6; j++) {
-                                                    g.setColor(Color.BLACK);
-                                                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle1s.size(); k++) {
-                                                if(circle1s.get(k) != c1) {
-                                                    g.setColor(circle1s.get(k).color);
-                                                    g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle2s.size(); k++) {
-                                                g.setColor(circle2s.get(k).color);
-                                                g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                                            }
-                                            g.setColor(c1.color);
-                                            g.fillOval(c1.x, i, 120, 120);
-                                            try {
-                                                Thread.sleep(4);
-                                            } catch(Exception e) {}
-                                        }
-                                        g.setColor(Color.YELLOW);
-                                        g.fillRect(10, 90, 990, 890);
-                                        for(int i=0; i<7; i++) {
-                                            for(int j=0; j<6; j++) {
-                                                g.setColor(Color.BLACK);
-                                                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                                            }
-                                        }
-                                        for(int i=0; i<circle1s.size(); i++) {
-                                            g.setColor(circle1s.get(i).color);
-                                            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
-                                        }
-                                        for(int i=0; i<circle2s.size(); i++) {
-                                            g.setColor(circle2s.get(i).color);
-                                            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                for(int i=110; i<c1.y; i+=5) {
+                                    g.setColor(Color.YELLOW);
+                                    g.fillRect(10, 80, 990, 890);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.GRAY);
+                                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                                         }
                                     }
-                                };
-                                t.start();
+                                    for(int k=0; k<circle1s.size(); k++) {
+                                        if(circle1s.get(k) != c1) {
+                                            g.setColor(circle1s.get(k).color);
+                                            g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+                                        }
+                                    }
+                                    for(int k=0; k<circle2s.size(); k++) {
+                                        g.setColor(circle2s.get(k).color);
+                                        g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                                    }
+                                    g.setColor(c1.color);
+                                    g.fillOval(c1.x, i, 120, 120);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.YELLOW);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                        }
+                                    }
+                                    try {
+                                        Thread.sleep(100);
+                                    } catch(Exception e) {}
+                                }
+                                g.setColor(Color.YELLOW);
+                                g.fillRect(10, 80, 990, 890);
+                                for(int i=0; i<7; i++) {
+                                    for(int j=0; j<6; j++) {
+                                        g.setColor(Color.GRAY);
+                                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+                                    }
+                                }
+                                for(int i=0; i<circle1s.size(); i++) {
+                                    g.setColor(circle1s.get(i).color);
+                                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+                                }
+                                for(int i=0; i<circle2s.size(); i++) {
+                                    g.setColor(circle2s.get(i).color);
+                                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                }
                                 turn = 1;
                             }
                             else if(turn == 1) {
@@ -1502,59 +1574,60 @@ public class Connect4 {
                                 }
                                 circle1s.add(c1);
                                 g.setColor(Color.YELLOW);
-                                g.fillRect(10, 90, 990, 890);
+                                g.fillRect(10, 80, 990, 890);
                                 for(int i=0; i<7; i++) {
                                     for(int j=0; j<6; j++) {
-                                        g.setColor(Color.BLACK);
+                                        g.setColor(Color.GRAY);
                                         g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
                                     }
                                 }
-                                Thread t = new Thread() {
-                                    public void run() {
-                                        for(int i=110; i<c1.y; i++) {
-                                            g.setColor(Color.YELLOW);
-                                            g.fillRect(10, 90, 990, 890);
-                                            for(int gg=0; gg<7; gg++) {
-                                                for(int j=0; j<6; j++) {
-                                                    g.setColor(Color.BLACK);
-                                                    g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle1s.size(); k++) {
-                                                if(circle1s.get(k) != c1) {
-                                                    g.setColor(circle1s.get(k).color);
-                                                    g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
-                                                }
-                                            }
-                                            for(int k=0; k<circle2s.size(); k++) {
-                                                g.setColor(circle2s.get(k).color);
-                                                g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
-                                            }
-                                            g.setColor(c1.color);
-                                            g.fillOval(c1.x, i, 120, 120);
-                                            try {
-                                                Thread.sleep(4);
-                                            } catch(Exception e) {}
-                                        }
-                                        g.setColor(Color.YELLOW);
-                                        g.fillRect(10, 90, 990, 890);
-                                        for(int i=0; i<7; i++) {
-                                            for(int j=0; j<6; j++) {
-                                                g.setColor(Color.BLACK);
-                                                g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
-                                            }
-                                        }
-                                        for(int i=0; i<circle1s.size(); i++) {
-                                            g.setColor(circle1s.get(i).color);
-                                            g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
-                                        }
-                                        for(int i=0; i<circle2s.size(); i++) {
-                                            g.setColor(circle2s.get(i).color);
-                                            g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                for(int i=110; i<c1.y; i+=5) {
+                                    g.setColor(Color.YELLOW);
+                                    g.fillRect(10, 80, 990, 890);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.GRAY);
+                                            g.fillOval(10+gg*140+6, j*140+6+100, 120, 120);
                                         }
                                     }
-                                };
-                                t.start();
+                                    for(int k=0; k<circle1s.size(); k++) {
+                                        if(circle1s.get(k) != c1) {
+                                            g.setColor(circle1s.get(k).color);
+                                            g.fillOval(circle1s.get(k).x, circle1s.get(k).y, 120, 120);
+                                        }
+                                    }
+                                    for(int k=0; k<circle2s.size(); k++) {
+                                        g.setColor(circle2s.get(k).color);
+                                        g.fillOval(circle2s.get(k).x, circle2s.get(k).y, 120, 120);
+                                    }
+                                    g.setColor(c1.color);
+                                    g.fillOval(c1.x, i, 120, 120);
+                                    for(int gg=0; gg<7; gg++) {
+                                        for(int j=0; j<6; j++) {
+                                            g.setColor(Color.YELLOW);
+                                            g.fillRect(10+gg*140+6, j*140+6+100-20, 165, 25);
+                                        }
+                                    }
+                                    try {
+                                        Thread.sleep(100);
+                                    } catch(Exception e) {}
+                                }
+                                g.setColor(Color.YELLOW);
+                                g.fillRect(10, 80, 990, 890);
+                                for(int i=0; i<7; i++) {
+                                    for(int j=0; j<6; j++) {
+                                        g.setColor(Color.GRAY);
+                                        g.fillOval(10+i*140+6, j*140+6+100, 120, 120);
+                                    }
+                                }
+                                for(int i=0; i<circle1s.size(); i++) {
+                                    g.setColor(circle1s.get(i).color);
+                                    g.fillOval(circle1s.get(i).x, circle1s.get(i).y, 120, 120);
+                                }
+                                for(int i=0; i<circle2s.size(); i++) {
+                                    g.setColor(circle2s.get(i).color);
+                                    g.fillOval(circle2s.get(i).x, circle2s.get(i).y, 120, 120);
+                                }
                                 turn = 1;
                             }
                             else if(turn == 1) {
@@ -1595,6 +1668,13 @@ public class Connect4 {
     }
 
     public static void main(String args[]) {
-        new Connect4();
+        try {
+            SwingUtilities.invokeAndWait(new Runnable() {
+                @Override
+                public void run() {
+                    new Connect4();
+                }
+            });
+        } catch(Exception e) {}
     }
 }
